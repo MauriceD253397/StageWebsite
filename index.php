@@ -20,23 +20,21 @@
 
             <button name="submitButton" id="submitButton">Next</button>
         </div>
-        <div id="step2Form" class="step2">
+        <div id="step2Form" class="step2">     
+            <p id="totalRegister"></p>
+            <p id="totalPrinter"></p>
             <p id="totalAmount"></p>
+
             <label for="register">Register</label>
             <input type="range" min="1" max="5" value="1" class="slider" id="register">
             <label for="printer">Printer</label>
-            <input type="range" min="1" max="3" value="1" class="slider" id="printer">  
+            <input type="range" min="1" max="3" value="1" class="slider" id="printer"> 
+
             <button name="submitButton" id="submitButton">Next</button>
         </div>
         <div id="step3Form" class="step3">
-            
             <button name="submitButton" id="submitButton">Next</button>
-        </div>
-        <div id="step4Form" class="step4">
-            
-            <button name="submitButton" id="submitButton">Next</button>
-        </div>
-     
+        </div> 
     </div>
     <script src="script.js"></script>
 </body>
