@@ -1,13 +1,30 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: #f2f2f2;
 }
 
 input {
     display: block;
     padding: 15px;
+    width: 50%;
+    border: 1px solid #ccc;
 }
 
 h1 {
     font-size: 54px;
     color: #333;
-}  
+    margin-bottom: 20px;
+}
+
+label {
+    width: 100%;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+nav {
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.22);
+    margin-bottom: 50px;
+}

@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Step #</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,8 +24,8 @@
     </nav>
     
     <div class="container">
-        <div class="row" id="step1Form">
-            <h1>Step #1</h1>
+        <div id="step1Form">
+            <h1>Contact information</h1>
             <div class="row">
                 <div class="col">
                     <label for="first_name">First name
@@ -104,7 +104,7 @@
             <p id="total_licence_costs">Licence costs:</p>
             <p id="total_hardware_install_costs">Hardware and installation costs: </p>
         </div>
-        <button name="submitButton" class="submitButton" id="submitButton" class="btn btn-danger">Next</button>
+        <button class="btn btn-danger" name="submitButton" id="submitButton">Next</button>
     </div>
     <script src="script.js"></script>
 </body>
