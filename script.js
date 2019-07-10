@@ -52,7 +52,6 @@ step5Form.style.display = "none";
 step6Form.style.display = "none";
 
 submitButton.onclick = function(){
-
     switch(stepCounter){
         case 1:
             if(1 == 1){

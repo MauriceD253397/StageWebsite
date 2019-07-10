@@ -60,7 +60,6 @@
                 <label for="printer">Printer</label>
                 <input type="range" min="1" max="3" value="1" class="slider" id="printer"> 
 
-                <button name="submitButton" id="submitButton">Next</button>
             </div>
         </div>
         <div id="step3Form" class="step3">
