@@ -26,63 +26,52 @@
     <div class="container">
         <form action="">
             <div id="step1Form">
-                    <h1>Contact information</h1>
-                    <div class="row">
-                        <div class="col">
-                            <label for="first_name">First name
+            <div class="row">
+                <h1>Contact information</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="first_name">First name
                                 <input class="input_step1" name="step1" type="text" id="first_name" value="Enter your first name here" required>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="last_name">Last name
+                    </label>
                                 <input class="input_step1" name="step1" type="text" id="last_name" value="Enter your last name here" required>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <label for="telephone_number">Telephone number
                                 <input class="input_step1" name="step1" type="text" id="telephone_number" value="Enter your phone number here" required>
-                            </label>
-                        </div>
-                    </div>
                 </div>
-        </form>
-
-        <div class="row" id="step2Form">
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="last_name">Last name
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="telephone_number">Telephone number
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div id="step2Form">
             <div class="row">
                 <h1>License fees</h1>
             </div>
             <div class="row">
-                <div class="col-4">
+                <div class="text-center col mr-5" id="test">
+                    <span>Register price</span>
                     <p id="totalRegister"></p>
+                    <input class="input_step2" type="range" min="1" max="5" value="1" class="slider" id="register">
                 </div>
-                <div class="col-4">
+                <div class="text-center col mr-5" id="test">
+                    <span>Printer price</span>
                     <p id="totalPrinter"></p>
+                    <input class="input_step2" type="range" min="1" max="3" value="1" class="slider" id="printer">
                 </div>
-                <div class="col-4">
+                <div class="text-center col" id="test">
+                    <span>Total price</span>
                     <p id="totalAmount"></p>
                 </div>
             </div>
-            <div class="row">
-                <label for="register">Register</label>
-                <input class="input_step2" type="range" min="1" max="5" value="1" class="slider" id="register">
-                <label for="printer">Printer</label>
-                <input class="input_step2" type="range" min="1" max="3" value="1" class="slider" id="printer"> 
-            </div>
-            <!-- 
-            terminalAmount
-            tabletAmount    
-            tabletHolderAmount
-            phoneAmount
-            receiptPrinterAmount
-            kitchenPrinterAmount
-            cashDrawerAmount
-            totalPriceStep3
-            -->
-
         </div>
 
         <div id="step3Form" class="step3">

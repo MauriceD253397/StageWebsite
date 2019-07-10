@@ -11,9 +11,8 @@ body {
 }
 
 .input_step2 {
-    width: 25%;
+    width: 50%;
     -webkit-appearance: none;
-    height: 25px;
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
@@ -28,8 +27,8 @@ body {
 .input_step2::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     background: #dc3545;
     cursor: pointer;
 }
@@ -53,13 +52,21 @@ nav {
     margin-bottom: 50px;
 }
 
-.col-4 {
+#test {
     border: 1px solid #ccc;
     background-color: white;
+    padding-top: 15px;
 }
 
-.col-4 p {
+#test p {
     color: #333;
     font-size: 54px;
     font-weight: 600;
+}
+
+#test span {
+    font-size: 20px;
+    color: #dc3545;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
