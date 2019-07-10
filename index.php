@@ -29,39 +29,49 @@
             <div class="row">
                 <div class="col">
                     <label for="first_name">First name
-                        <input name="step1" type="text" id="first_name" value="">
+                        <input class="input_step1" name="step1" type="text" id="first_name" value="">
                     </label>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <label for="last_name">Last name
-                        <input name="step1" type="text" id="last_name" value="">
+                        <input class="input_step1" name="step1" type="text" id="last_name" value="">
                     </label>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <label for="telephone_number">Telephone number
-                        <input name="step1" type="text" id="telephone_number" value="">
+                        <input class="input_step1" name="step1" type="text" id="telephone_number" value="">
                     </label>
                 </div>
             </div>
         </div>
         
-        <div class="row" id="step2Form">   
-            <div class="col">
-                <p id="totalRegister"></p>
-                <p id="totalPrinter"></p>
-                <p id="totalAmount"></p>
-
+        <div class="row" id="step2Form">
+            <div class="row">
+                <h1>License fees</h1>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <p id="totalRegister"></p>
+                </div>
+                <div class="col-4">
+                    <p id="totalPrinter"></p>
+                </div>
+                <div class="col-4">
+                    <p id="totalAmount"></p>
+                </div>
+            </div>
+            <div class="row">
                 <label for="register">Register</label>
-                <input type="range" min="1" max="5" value="1" class="slider" id="register">
+                <input class="input_step2" type="range" min="1" max="5" value="1" class="slider" id="register">
                 <label for="printer">Printer</label>
-                <input type="range" min="1" max="3" value="1" class="slider" id="printer"> 
-
+                <input class="input_step2" type="range" min="1" max="3" value="1" class="slider" id="printer"> 
             </div>
         </div>
+
         <div id="step3Form" class="step3">
             <form action="">
                 <label for="terminal">Terminal</label>

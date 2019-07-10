@@ -3,11 +3,35 @@ body {
     background-color: #f2f2f2;
 }
 
-input {
+.input_step1 {
     display: block;
     padding: 15px;
     width: 50%;
     border: 1px solid #ccc;
+}
+
+.input_step2 {
+    width: 25%;
+    -webkit-appearance: none;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.input_step2:hover {
+    opacity: 1;
+}
+
+.input_step2::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #dc3545;
+    cursor: pointer;
 }
 
 h1 {
@@ -27,4 +51,15 @@ label {
 nav {
     box-shadow: 0 0 3px 0 rgba(0,0,0,0.22);
     margin-bottom: 50px;
+}
+
+.col-4 {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.col-4 p {
+    color: #333;
+    font-size: 54px;
+    font-weight: 600;
 }
