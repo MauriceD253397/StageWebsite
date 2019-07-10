@@ -24,31 +24,33 @@
     </nav>
     
     <div class="container">
-        <div id="step1Form">
-            <h1>Contact information</h1>
-            <div class="row">
-                <div class="col">
-                    <label for="first_name">First name
-                        <input class="input_step1" name="step1" type="text" id="first_name" value="">
-                    </label>
+        <form action="">
+            <div id="step1Form">
+                    <h1>Contact information</h1>
+                    <div class="row">
+                        <div class="col">
+                            <label for="first_name">First name
+                                <input class="input_step1" name="step1" type="text" id="first_name" value="Enter your first name here" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="last_name">Last name
+                                <input class="input_step1" name="step1" type="text" id="last_name" value="Enter your last name here" required>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="telephone_number">Telephone number
+                                <input class="input_step1" name="step1" type="text" id="telephone_number" value="Enter your phone number here" required>
+                            </label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="last_name">Last name
-                        <input class="input_step1" name="step1" type="text" id="last_name" value="">
-                    </label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <label for="telephone_number">Telephone number
-                        <input class="input_step1" name="step1" type="text" id="telephone_number" value="">
-                    </label>
-                </div>
-            </div>
-        </div>
-        
+        </form>
+
         <div class="row" id="step2Form">
             <div class="row">
                 <h1>License fees</h1>

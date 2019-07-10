@@ -1,6 +1,9 @@
 const stepCounterNav = document.getElementById('step_counter');
 // step 1 el's
 const step1Elements = document.getElementsByClassName("step1"); 
+let firstName = document.getElementById('first_name').value;
+let lastName = document.getElementById('last_name').value;
+let phoneNumber = document.getElementById('telephone_number').value;
 
 const submitButton = document.getElementById('submitButton');
 // step 2 el's 
@@ -21,6 +24,7 @@ const kitchenPrinterAmount = document.getElementById('kitchen_printer');
 const cashDrawerAmount = document.getElementById('cash_drawer');
 const totalPriceStep3 = document.getElementById('totalPrice');
 
+let totalHardwarePrice = 0;
 let stepCounter = 1;
 
 // step 5 el's
@@ -58,14 +62,50 @@ printer.addEventListener('input',() => {
     totalAmount.innerHTML =  "€"+ totalPrice;
 });
 
+let totalTerminalPrice =0;
+let totalTabletPrice = 0;
+let totalTabletHolderPrice = 0;
+let totalPhonePrice = 0;
+let totalReceiptPrice = 0;
+let totalKitchenPrinterPrice = 0;
+let totalCashDrawerPrice = 0;
 // step 3 functionality
-// terminalAmount.addEventListener('input');
-// tabletAmount.addEventListener('input');
-// tabletHolderAmount.addEventListener('input');
-// phoneAmount.addEventListener('input');
-// receiptPrinterAmount.addEventListener('input');
-// kitchenPrinterAmount.addEventListener('input');
-// cashDrawerAmount.addEventListener('input');
+
+terminalAmount.addEventListener('input',()=>{
+    totalTerminalPrice = terminalAmount.value * 500;
+    totalHardwarePrice = totalTerminalPrice + totalTabletPrice + totalTabletHolderPrice + totalPhonePrice + totalReceiptPrice + totalKitchenPrinterPrice + totalCashDrawerPrice;
+    totalPriceStep3.innerHTML = totalHardwarePrice;
+});
+tabletAmount.addEventListener('input',()=>{
+    totalTabletPrice = tabletAmount.value * 250;
+    totalHardwarePrice = totalTerminalPrice + totalTabletPrice + totalTabletHolderPrice + totalPhonePrice + totalReceiptPrice + totalKitchenPrinterPrice + totalCashDrawerPrice;
+    totalPriceStep3.innerHTML = totalHardwarePrice;
+});
+tabletHolderAmount.addEventListener('input',()=>{
+    totalTabletHolderPrice = tabletHolderAmount.value * 100;
+    totalHardwarePrice = totalTerminalPrice + totalTabletPrice + totalTabletHolderPrice + totalPhonePrice + totalReceiptPrice + totalKitchenPrinterPrice + totalCashDrawerPrice;
+    totalPriceStep3.innerHTML = totalHardwarePrice;
+});
+phoneAmount.addEventListener('input',()=>{
+    totalPhonePrice = phoneAmount.value * 200;
+    totalHardwarePrice = totalTerminalPrice + totalTabletPrice + totalTabletHolderPrice + totalPhonePrice + totalReceiptPrice + totalKitchenPrinterPrice + totalCashDrawerPrice;
+    totalPriceStep3.innerHTML = totalHardwarePrice;
+});
+receiptPrinterAmount.addEventListener('input',()=>{
+    totalReceiptPrice = receiptPrinterAmount.value * 200;
+    totalHardwarePrice = totalTerminalPrice + totalTabletPrice + totalTabletHolderPrice + totalPhonePrice + totalReceiptPrice + totalKitchenPrinterPrice + totalCashDrawerPrice;
+    totalPriceStep3.innerHTML = totalHardwarePrice;
+});
+kitchenPrinterAmount.addEventListener('input',()=>{
+    totalKitchenPrinterPrice = kitchenPrinterAmount.value * 325;
+    totalHardwarePrice = totalTerminalPrice + totalTabletPrice + totalTabletHolderPrice + totalPhonePrice + totalReceiptPrice + totalKitchenPrinterPrice + totalCashDrawerPrice;
+    totalPriceStep3.innerHTML = totalHardwarePrice;
+});
+cashDrawerAmount.addEventListener('input',()=>{
+    totalCashDrawerPrice = cashDrawerAmount.value * 50;
+    totalHardwarePrice = totalTerminalPrice + totalTabletPrice + totalTabletHolderPrice + totalPhonePrice + totalReceiptPrice + totalKitchenPrinterPrice + totalCashDrawerPrice;
+    totalPriceStep3.innerHTML =  "€" + totalHardwarePrice;
+});
 
 
 
@@ -88,17 +128,22 @@ step5Form.style.display = "none";
 step6Form.style.display = "none";
 
 submitButton.onclick = function(){
+    firstName = document.getElementById('first_name').value;
+    lastName = document.getElementById('last_name').value;
+    phoneNumber = document.getElementById('telephone_number').value;
+    console.log(firstName);  
     switch(stepCounter){
         case 1:
-            if(1 == 1){
+            if(firstName && lastName && phoneNumber && !isNaN(phoneNumber)){
                 step1Form.style.display = "none";
                 step2Form.style.display = "block";
                 stepCounter++;
                 stepCounterNav.innerHTML = "Step #" + stepCounter;
-                console.log(step1Elements);
+                console.log(firstName);   
             }
             else{
-                window.alert("You didn't enter that correctly");
+                console.log(firstName);   
+                window.alert("You didn't enter that correctly"); 
             }
             
             break;
@@ -109,10 +154,15 @@ submitButton.onclick = function(){
             stepCounterNav.innerHTML = "Step #" + stepCounter;
             break;
         case 3:
-            step3Form.style.display = "none";
-            step4Form.style.display = "block";
-            stepCounter++;
-            stepCounterNav.innerHTML = "Step #" + stepCounter;
+            if(terminalAmount.value < 0 || tabletAmount.value < 0 || tabletHolderAmount < 0 || phoneAmount.value < 0 || receiptPrinterAmount < 0 || kitchenPrinterAmount < 0 || cashDrawerAmount < 0){
+                window.alert("You can't buy less than 0!");
+            }
+            else{
+                step3Form.style.display = "none";
+                step4Form.style.display = "block";
+                stepCounter++;
+                stepCounterNav.innerHTML = "Step #" + stepCounter;
+            }
             break;
         case 4:
             step4Form.style.display = "none";
@@ -128,7 +178,8 @@ submitButton.onclick = function(){
             // step 6 functionality
 
             totalLicenseCosts.innerHTML = "License costs: €" + totalPrice;
-            totalHardwareInstallCosts.innerHTML = "Total cost: €" + totalPrice  // alle dingen van stap 3
+            let totalHardwareCost = totalHardwarePrice + wiringCost;
+            totalHardwareInstallCosts.innerHTML = "Total cost: €" + totalHardwareCost;  // alle dingen van stap 3
 
             break;
         case 6:
