@@ -1,4 +1,4 @@
-
+const stepCounterNav = document.getElementById('step_counter');
 // step 1 el's
 const step1Elements = document.getElementsByClassName("step1"); 
 
@@ -12,35 +12,71 @@ const totalPrinter = document.getElementById('totalPrinter');
 const totalRegister = document.getElementById('totalRegister');
 
 // step 3 el's 
-
+const terminalAmount = document.getElementById('terminal');
+const tabletAmount = document.getElementById('tablet');
+const tabletHolderAmount = document.getElementById('tablet_holder')
+const phoneAmount = document.getElementById('phone');
+const receiptPrinterAmount = document.getElementById('receipt_printer');
+const kitchenPrinterAmount = document.getElementById('kitchen_printer');
+const cashDrawerAmount = document.getElementById('cash_drawer');
 const totalPriceStep3 = document.getElementById('totalPrice');
 
 let stepCounter = 1;
+
+// step 5 el's
+
+const wiring = document.getElementById('wiring');   
+const totalInstallationCost = document.getElementById('total_installation_cost');
+
+// step 6 el's
+const totalLicenseCosts = document.getElementById('total_license_costs');
+const totalHardwareInstallCosts = document.getElementById('total_hardware_install_costs');
+
 // default step 2 values
 let totalPrice = 32.50 + 12.50 + 15;
 let totalPrinterPrice = 15;
 let totalRegisterPrice = 12.50;
 
-totalRegister.innerHTML = "Total register price: " + totalRegisterPrice;
-totalPrinter.innerHTML = "Total printer price: " + totalPrinterPrice;
-totalAmount.innerHTML = "Total price: " + totalPrice + " per month (including basic fee)";
+totalRegister.innerHTML =  "€"+ totalRegisterPrice;
+totalPrinter.innerHTML ="€"+ totalPrinterPrice;
+totalAmount.innerHTML = "€"+ totalPrice;
+  
+// step 2 functionality
 
 // register slider change
 register.addEventListener('input',() => {
     totalRegisterPrice = register.value * 12.50;
     totalPrice = totalPrinterPrice + totalRegisterPrice + 32.50;
-    totalRegister.innerHTML = "Total register price: " + totalRegisterPrice;
-    totalAmount.innerHTML =  "Total price: " + totalPrice + " per month (including basic fee)";
+    totalRegister.innerHTML = "€"+totalRegisterPrice;
+    totalAmount.innerHTML =  "€"+totalPrice;
 });
 // printer slider change
 printer.addEventListener('input',() => {
     totalPrinterPrice = printer.value * 15;  
     totalPrice = totalPrinterPrice + totalRegisterPrice + 32.50;
-    totalPrinter.innerHTML = "Total printer price: " + totalPrinterPrice;
-    totalAmount.innerHTML =  "Total price: " + totalPrice + " per month (including basic fee)";
+    totalPrinter.innerHTML ="€"+ totalPrinterPrice;
+    totalAmount.innerHTML =  "€"+ totalPrice;
 });
-// 
-    
+
+// step 3 functionality
+// terminalAmount.addEventListener('input');
+// tabletAmount.addEventListener('input');
+// tabletHolderAmount.addEventListener('input');
+// phoneAmount.addEventListener('input');
+// receiptPrinterAmount.addEventListener('input');
+// kitchenPrinterAmount.addEventListener('input');
+// cashDrawerAmount.addEventListener('input');
+
+
+
+// step 5 functionality
+let wiringCost;
+wiring.addEventListener('input',()=>{
+    wiringCost = wiring.value * 50 + 300;
+    totalInstallationCost.innerHTML = "Total cost: €" + wiringCost;
+});
+
+
 
 // Pagination function
 
@@ -57,33 +93,43 @@ submitButton.onclick = function(){
             if(1 == 1){
                 step1Form.style.display = "none";
                 step2Form.style.display = "block";
-                
-
+                stepCounter++;
+                stepCounterNav.innerHTML = "Step #" + stepCounter;
                 console.log(step1Elements);
             }
             else{
                 window.alert("You didn't enter that correctly");
             }
-            stepCounter++;
+            
             break;
         case 2:
             step2Form.style.display = "none";
             step3Form.style.display = "block";  
             stepCounter++;
+            stepCounterNav.innerHTML = "Step #" + stepCounter;
             break;
         case 3:
             step3Form.style.display = "none";
             step4Form.style.display = "block";
             stepCounter++;
+            stepCounterNav.innerHTML = "Step #" + stepCounter;
             break;
         case 4:
             step4Form.style.display = "none";
             step5Form.style.display = "block";
             stepCounter++;
+            stepCounterNav.innerHTML = "Step #" + stepCounter;
             break;
         case 5:
             step5Form.style.display = "none";
             step6Form.style.display = "block";
+            stepCounter++;
+            stepCounterNav.innerHTML = "Step #" + stepCounter;
+            // step 6 functionality
+
+            totalLicenseCosts.innerHTML = "License costs: €" + totalPrice;
+            totalHardwareInstallCosts.innerHTML = "Total cost: €" + totalPrice  // alle dingen van stap 3
+
             break;
         case 6:
             

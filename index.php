@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Step #</a>
+        <a id="step_counter" class="navbar-brand" href="#">Step #1</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -70,6 +70,17 @@
                 <label for="printer">Printer</label>
                 <input class="input_step2" type="range" min="1" max="3" value="1" class="slider" id="printer"> 
             </div>
+            <!-- 
+            terminalAmount
+            tabletAmount    
+            tabletHolderAmount
+            phoneAmount
+            receiptPrinterAmount
+            kitchenPrinterAmount
+            cashDrawerAmount
+            totalPriceStep3
+            -->
+
         </div>
 
         <div id="step3Form" class="step3">
@@ -105,13 +116,13 @@
         <div id="step5Form" class="step5">
             <h2>Installation</h2>
             <p>Standard costs: $300</p>
-            <label for="wiring">Wiring cost</label>
+            <label for="wiring">Wiring cost $50 per:</label>
             <input type="number" id="wiring" min="0" max="2">
             <p id="total_installation_cost">Total cost: $300</p>
         </div>
         <div id="step6Form" class="step6">
             <h2>Overview</h2>
-            <p id="total_licence_costs">Licence costs:</p>
+            <p id="total_license_costs">License costs:</p>
             <p id="total_hardware_install_costs">Hardware and installation costs: </p>
         </div>
         <button class="btn btn-danger" name="submitButton" id="submitButton">Next</button>
