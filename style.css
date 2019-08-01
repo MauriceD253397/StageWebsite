@@ -1,7 +1,31 @@
+/* GENERAL STYLING */
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f2f2f2;
 }
+
+h1 {
+    font-size: 54px;
+    color: #333;
+}
+
+label {
+    width: 100%;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+/* NAVBAR */
+
+nav {
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.22);
+    margin-bottom: 50px;
+}
+
+/* STEP #1 */
 
 .input_step1 {
     display: block;
@@ -9,6 +33,8 @@ body {
     width: 50%;
     border: 1px solid #ccc;
 }
+
+/* STEP #2 */
 
 .input_step2 {
     width: 50%;
@@ -33,40 +59,47 @@ body {
     cursor: pointer;
 }
 
-h1 {
-    font-size: 54px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-label {
-    width: 100%;
-}
-
-.row {
-    margin-bottom: 20px;
-}
-
-nav {
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.22);
-    margin-bottom: 50px;
-}
-
-#test {
+#col_step2 {
     border: 1px solid #ccc;
     background-color: white;
     padding-top: 15px;
 }
 
-#test p {
+#col_step2 p {
     color: #333;
     font-size: 54px;
     font-weight: 600;
 }
 
-#test span {
+#col_step2 span {
     font-size: 20px;
     color: #dc3545;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+/* STEP 3 */
+
+#step3Form label {
+    margin-bottom: 0px;
+}
+
+#step3Form input {
+    margin-bottom: 20px;
+}
+
+/* STEP 4 */
+
+#col_step4 {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding-top: 15px;
+}
+
+/* STEP 5 & 6 */
+
+#col_step5-6 {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding-top: 15px;
 }
