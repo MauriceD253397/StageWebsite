@@ -165,22 +165,31 @@ submitButton.onclick = function(){
             }
             break;
         case 4:
-            step4Form.style.display = "none";
-            step5Form.style.display = "block";
-            stepCounter++;
-            stepCounterNav.innerHTML = "Step #" + stepCounter;
+            
+            
+                step4Form.style.display = "none";
+                step5Form.style.display = "block";
+                stepCounter++;
+                stepCounterNav.innerHTML = "Step #" + stepCounter;
+            
+     
             break;
         case 5:
-            step5Form.style.display = "none";
-            step6Form.style.display = "block";
-            stepCounter++;
-            stepCounterNav.innerHTML = "Step #" + stepCounter;
-            // step 6 functionality
-
-            totalLicenseCosts.innerHTML = "License costs: €" + totalPrice;
-            let totalHardwareCost = totalHardwarePrice + wiringCost;
-            totalHardwareInstallCosts.innerHTML = "Total cost: €" + totalHardwareCost;  // alle dingen van stap 3
-
+                if(wiring.value < 0 || wiring.value > 2){
+                    window.alert("You can't buy less than 0 or more than 2!");
+                }
+                else{
+                    step5Form.style.display = "none";
+                    step6Form.style.display = "block";
+                    stepCounter++;
+                    stepCounterNav.innerHTML = "Step #" + stepCounter;
+                    // step 6 functionality
+                    totalLicenseCosts.innerHTML = "License costs: €" + totalPrice;
+                    let totalHardwareCost = totalHardwarePrice + wiringCost;
+                    totalHardwareInstallCosts.innerHTML = "Total cost: €" + totalHardwareCost;  
+                }
+            
+            
             break;
         case 6:
             

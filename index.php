@@ -101,7 +101,7 @@
                 <label for="payment_year">Yearly</label>
                 <input name="payment" type="radio" id="payment_year" selected>
                 <label for="payment_three_years">Triannual</label>
-                <input name="payment" type="radio" id="payment_three_years">
+                <input name="payment" type="radio" id="payment_three_years" required>
             </form>         
         </div>
         <div id="step5Form" class="step5">
